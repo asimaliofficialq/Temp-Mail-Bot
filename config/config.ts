@@ -1,18 +1,18 @@
-export const BOT_TOKEN = Deno.env.get("BOT_TOKEN")!;
+export const BOT_TOKEN = Deno.env.get("8590924289:AAFfyKAB13xU7TqHMORZr_hXndheES8p4L8")!;
 console.log(BOT_TOKEN);
-export const CHANNEL_USERNAME = (Deno.env.get("CHANNEL_USERNAME") || "@Private_Bots").replace(/^@?/, "@");
+export const CHANNEL_USERNAME = (Deno.env.get("CHANNEL_USERNAME") || "@ALIASIM16").replace(/^@?/, "@");
 export const GUERRILLA_MAIL_API = "https://api.guerrillamail.com/ajax.php";
 export const ADMIN_ID = 7855536617;
 
-const requiredVars = ["BOT_TOKEN", "CHANNEL_USERNAME"];
+const requiredVars = ["8590924289:AAFfyKAB13xU7TqHMORZr_hXndheES8p4L8", "@ALIASIM16"];
 requiredVars.forEach((varName) => {
   if (!Deno.env.get(varName)) {
     throw new Error(`Missing required environment variable: ${varName}`);
   }
 });
 
-if (!CHANNEL_USERNAME.startsWith("@")) {
-  throw new Error('Invalid CHANNEL_USERNAME: it must start with "@"');
+if (!CHANNEL_USERNAME.startsWith("@ALIASIM16")) {
+  throw new Error('Invalid CHANNEL_USERNAME: it must start with "@ALIASIM16"');
 }
 
 export const MONGO_URI = (() => {
@@ -30,3 +30,4 @@ console.log(MONGO_URI);
 
 export const USE_DB = Boolean(MONGO_URI);
 export const CLEAN_USERNAME = CHANNEL_USERNAME.replace(/@/g, '');
+
